@@ -9,16 +9,22 @@ namespace DailyChallenge235
     {
         static void Main()
         {
-            int a = 492;
-            int b = 493;
+            int a, b;
+            string[] str;
+
+            Console.WriteLine("Ruth-Aaron pair checker");
+            Console.Write("Enter two consecuitive numbers\nseparated by commas (i.e. '601,602'): ");
+            var input = Console.ReadLine();
+
+            str = input.Split(',');
+            a = int.Parse(str[0]);
+            b = int.Parse(str[1]);
 
             if (IsRuthAaron(a, b)) {
                 Console.WriteLine("({0},{1}) VALID", a, b);
             }
             else
                 Console.WriteLine("({0},{1}) NOT VALID", a, b);
-
-            Console.WriteLine();
 
             Console.ReadKey();
         }
